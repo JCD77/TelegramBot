@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Usuario\.nuget\packages\microsoft.powershell.sdk\7.2.0-preview.7\contentFiles\any\any\runtimes\win\lib\net6.0\Modules\Microsoft.PowerShell.Utility\Microsoft.PowerShell.Utility.psd1" />
+    <None Remove="C:\Users\Usuario\.nuget\packages\microsoft.powershell.sdk\7.2.0-preview.7\contentFiles\any\any\runtimes\win\lib\net6.0\Modules\Microsoft.WSMan.Management\Microsoft.WSMan.Management.psd1" />
+    <None Remove="C:\Users\Usuario\.nuget\packages\microsoft.powershell.sdk\7.2.0-preview.7\contentFiles\any\any\runtimes\win\lib\net6.0\Modules\Microsoft.WSMan.Management\WSMan.format.ps1xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+    <PackageReference Include="Microsoft.PowerShell.SDK" Version="7.1.3" />
+    <PackageReference Include="Telegram.Bot" Version="16.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Scripts\pingFallo.ps">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Scripts\pingGoogleDNS.ps">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Scripts\pingGoogle.ps">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
